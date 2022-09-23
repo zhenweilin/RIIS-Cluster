@@ -46,14 +46,14 @@ sed -i '597s/$/'" {USR}"'/' /nfsshare/lsf10.1/conf/lsbatch/cjdx.cluster/configdi
 sed -i '85s/$/'"\n{USR}  10  1"'/' /nfsshare/lsf10.1/conf/lsbatch/cjdx.cluster/configdir/lsb.users
 
 make -C /var/yp
-badmin reconfig
+sudo badmin reconfig
 '''.format(USR = username, EXPIR = expiration_date)
 
 
 with open("./add_user.sh", 'w') as f:
     f.write(shfile)
     
-os.system('./add_user.sh')
+os.system('sudo bash ./add_user.sh')
 
 os.system('rm -f ./add_user.sh')
     
