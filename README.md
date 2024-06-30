@@ -3,19 +3,19 @@
 ## 集群登录
 
 #### 配置
-- IP： 202.121.138.165
+- IP： 202.121.138.166
 - 端口：8000
 - 用户名：username
 - 密码: password
 
 #### 通过终端登录
 ```shell
-ssh username@202.121.138.165 -p 8000
+ssh username@202.121.138.166 -p 8000
 ```
 
 #### 通过终端文件传输
 ```shell
-scp -P 8000 localfilepath username@202.121.138.165:/nfsshare/home/username/...
+scp -P 8000 localfilepath username@202.121.138.166:/nfsshare/home/username/...
 ```
 
 
